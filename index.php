@@ -30,7 +30,7 @@
 	   <input type="email" name="email" placeholder="Email"><br><br>
 	   <input type="password" name="password" placeholder="password"><br><br>
 	   <input type="date" name="birthday" placeholder="Birthday"><br><br>
-	    <input type="radio" name="gender" value="male" checked> Male<br>
+	    <input type="radio" name="gender" value="male"> Male<br>
        <input type="radio" name="gender" value="female"> Female<br>
 	 
 	   <input type="submit" value="Send">

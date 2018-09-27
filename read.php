@@ -1,11 +1,12 @@
 <?php
-$sql = "SELECT id, username, firstname, lastname, email, password, birthday, gender FROM users";
+require_once 'db.php';
+$sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Username: " . $row["username"]. " " . $row["firstname"].  " " .$row["lstname"]. 
-             .$row["email"]. " " .$row["password"]. " " .$row["birthday"]. " " .$row["gender"] "<br>";
+        $users = array("id: " . $row["id"]. " - Username: " . $row["username"]. " " . $row["firstname"].  " " .$row["lastname"]. " "
+             .$row["email"]. " " .$row["password"]. " " .$row["birthday"]. " " .$row["gender"] ."<br>");
     }
 } else {
     echo "0 results";

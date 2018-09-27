@@ -1,5 +1,6 @@
 <?php
-require "db.php";
+require_once "db.php";
+
  if(isset($_POST['username']) && isset($_POST['firstname']) && 
        isset($_POST['lastname']) && isset($_POST['email']) && 
        isset($_POST['password']) && isset($_POST['birthday']) && isset($_POST['gender'])){
@@ -8,8 +9,8 @@ require "db.php";
        $lastname = $_POST['lastname'];
        $email = $_POST['email'];
        $password = md5($_POST['password']);
-       $birthday = $birthday = new DateTime($_POST['date']);
-       $birthday = $birthday->format("Y-m-d");
+       $birthday = $birthday = new DateTime($_POST['birthday']);
+       $birthday = $birthday->format("d-m-Y");
        $gender = $_POST['gender'];
       
       
