@@ -4,8 +4,8 @@ require_once 'db.php';
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
-$users = array("id: " . $row["id"]. " - Username: " . $row["username"]. " " . $row["firstname"].  " " .$row["lastname"]. " "
-             .$row["email"]. " " .$row["password"]. " " .$row["birthday"]. " " .$row["gender"] ."<br>");
+$users = array("id: " . ["id"]. " - Username: " . ["username"]. " " . ["firstname"].  " " .["lastname"]. " "
+             .["email"]. " " .["password"]. " " .["birthday"]. " " .["gender"] ."<br>");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
