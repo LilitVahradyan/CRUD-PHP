@@ -27,6 +27,7 @@
            `lastname` VARCHAR(20) NOT NULL,
            `email` VARCHAR(20) NOT NULL UNIQUE,
            `password` VARCHAR(20) NOT NULL UNIQUE,
+           `gender` ENUM('male', 'female') NOT NULL,
            `birthday` DATE NULL)ENGINE=InnoDB";
     $table = $conn->query($sql);
     if($table === TRUE){
