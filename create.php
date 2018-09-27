@@ -8,19 +8,22 @@ require "db.php";
        $lastname = $_POST['lastname'];
        $email = $_POST['email'];
        $password = md5($_POST['password']);
-       $birthday = $_POST['birthday'];
+       $birthday = $birthday = new DateTime($_POST['date']);
+       $birthday = $birthday->format("Y-m-d");
        $gender = $_POST['gender'];
       
       
        $sql = $conn->prepare("INSERT INTO users (username, firstname, lastname, email, password, birthday, gender) 
-       	                   VALUES (?, ?, ?, ?, ?, ?)");
-        $sql->bind_param("sssssss", $username, $firstname, $lastname, $email, $password,  $birthday, $gender);
+       	                   VALUES (?, ?, ?, ?, ?, ?, ?)");
+       $sql->bind_param("sssssss", $username, $firstname, $lastname, $email, $password,  $birthday, $gender);
        if($sql === false){
        	  die("Failed to insert");
        }else{
        	echo "Insert into table successfully"; 
        }
     }
+    $sql->execute();
+    $sql->close();
     $conn -> close();
 
     ?>
