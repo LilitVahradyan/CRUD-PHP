@@ -3,7 +3,7 @@ require_once 'db.php';
     $id = $_GET['editid'];
     $user = "SELECT * FROM users WHERE  id=$id";
     
-    $result = $conn->query($user['id']);
+    $result = $conn->query($user);
     $data = $result->fetch_assoc();
    
  ?> 
@@ -20,8 +20,8 @@ require_once 'db.php';
 	   <input type="email" name="email" value="<?= $data['email']?>" placeholder="Email"><br><br>
 	   <input type="password" name="password" value="<?= $data['password']?>" placeholder="password"><br><br>
 	   <input type="date" name="birthday" value="<?= $data['birthday']?>" placeholder="Birthday"><br><br>
-	    <input type="radio" name="gender" value="<?= $data['male']?>"> Male<br>
-       <input type="radio" name="gender" value="<?= $data['female']?>"> Female<br>
+	    <input type="radio" name="gender" value="<?= $data['gender']?>"><br>
+       
 	 
 	   <input type="submit" value="Send">
 	</form>
