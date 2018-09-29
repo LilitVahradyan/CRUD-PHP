@@ -13,7 +13,7 @@ require_once 'db.php';
 
 
       <form action="updateUser.php" method="post"> 
-      	<input type="hidden" name="editId" value="<?= $_GET['editId']?>">
+      	<input type="hidden" name="editId" value="<?= $id ?>">
        <input type="text" name="username" value="<?= $data.username?>" placeholder="Username"><br><br>
 	   <input type="text" name="firstname" value="<?= $data.firstname?>" placeholder="First Name"><br><br>
 	   <input type="text" name="lastname" value="<?= $data.lastname?>" placeholder="LastName"><br><br>
