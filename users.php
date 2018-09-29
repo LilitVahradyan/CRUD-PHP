@@ -1,5 +1,6 @@
 <?php 
 require_once 'read.php';
+
 print_r($users);
 
 ?>
@@ -30,4 +31,7 @@ print_r($users);
         <?php }?>
     </tr>
     <?php }?>
+    <td><a href="update.php?editid=<?php $user.id?>">Update</a></td>
+    <td><a href="delete.php.php?editid=<?php $user.id?>">Delete</a></td>
+    
 </table>
