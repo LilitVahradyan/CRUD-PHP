@@ -1,3 +1,15 @@
+    <?php
+require_once 'db.php';
+    $user = "SELECT * FROM users WHERE  id=$_GET['editid']";
+    $result = $conn->query($user);
+    $data = $result->fetch_assoc();
+   
+ ?> 
+     
+
+
+
+
       <form action="" method=""> 
        <input type="text" name="username" value="<?php $user.username?>" placeholder="Username"><br><br>
 	   <input type="text" name="firstname" value="<?php $user.firstname?>" placeholder="First Name"><br><br>
@@ -10,9 +22,4 @@
 	 
 	   <input type="submit" value="Send">
 	</form>
-	 <?php
-require_once 'db.php';
-
-   
- ?> 
-  
+	
