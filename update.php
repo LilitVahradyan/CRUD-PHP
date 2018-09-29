@@ -20,9 +20,9 @@ require_once 'db.php';
 	   <input type="email" name="email" value="<?= $data['email']?>" placeholder="Email"><br><br>
 	   <input type="password" name="password" value="<?= $data['password']?>" placeholder="password"><br><br>
 	   <input type="date" name="birthday" value="<?= $data['birthday']?>" placeholder="Birthday"><br><br>
-	    <input type="radio" name="gender" value="<?= $data['gender']?>"><br>
+	    <input type="radio" name="gender"<?php if($gender ==="male"){ ?> checked <?php } ?> value="male"><br>
+	<input type="radio" name="gender"<?php if($gender ==="female"){ ?> checked <?php } ?> value="Female"><br>
        
 	 
 	   <input type="submit" value="Send">
 	</form>
-	
