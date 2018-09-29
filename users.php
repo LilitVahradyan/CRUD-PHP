@@ -31,7 +31,7 @@ print_r($users);
         <?php }?>
     </tr>
     <?php }?>
-    <td><a href="update.php?editid=<?php $user.id?>">Update</a></td>
-    <td><a href="delete.php.php?editid=<?php $user.id?>">Delete</a></td>
+    <td><a href="update.php?editid=<?= $user['id']?>">Update</a></td>
+    <td><a href="delete.php.php?editid=<?= $user['id']?>">Delete</a></td>
     
 </table>
