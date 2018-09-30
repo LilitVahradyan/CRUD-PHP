@@ -10,7 +10,8 @@
 	$gender = $_POST['gender'];
 	$id = $_POST['id'];
 
-	$update = "UPDATE users SET username=$username, firstname=$firstname, lastname=$lastname, email=$email, password= $password, 
-	                            birthday=$birthday, gender=$gender  WHERE id=$id";
+	$update =$conn-?prepare("UPDATE users SET ?, ?, ?, ?, ?, ? WHERE id=$id")
+	$update = bind_param("ssssss", 'username'=$username, 'firstname'=$firstname, 'lastname'=$lastname, 'email'=$email,
+	 'password'= $'password','birthday'=$birthday, 'gender'=$gender);
     header("Locaion:users.php");
 ?>
