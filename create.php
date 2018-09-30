@@ -9,8 +9,7 @@ require_once "db.php";
        $lastname = $_POST['lastname'];
        $email = $_POST['email'];
        $password = md5($_POST['password']);
-       $birthday = $birthday = new DateTime($_POST['birthday']);
-       $birthday = $birthday->format("d-m-Y");
+       $birthday = $_POST['birthday'];
        $gender = $_POST['gender'];
       
       
