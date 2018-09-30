@@ -7,5 +7,5 @@
     $delete->execute();
     $delete->close();
     $conn->close();
-    header("Locaion:users.php");
+    header("Location:users.php") ;
 ?>

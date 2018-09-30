@@ -16,11 +16,7 @@ require_once "db.php";
        $sql = $conn->prepare("INSERT INTO users (username, firstname, lastname, email, password, birthday, gender) 
        	                      VALUES (?, ?, ?, ?, ?, ?, ?)");
        $sql->bind_param("sssssss", $username, $firstname, $lastname, $email, $password,  $birthday, $gender);
-       if($sql === false){
-       	  die("Failed to insert");
-       }else{
-       	echo "Insert into table successfully"; 
-       }
+       
     }
 $sql->execute();
 $sql->close();
