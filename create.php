@@ -18,6 +18,7 @@ require_once "db.php";
        $sql->bind_param("sssssss", $username, $firstname, $lastname, $email, $password,  $birthday, $gender);
        
     }
+    header("Location:users.php") ;
 $sql->execute();
 $sql->close();
 $conn->close();
