@@ -8,8 +8,9 @@
 	$birthday = $birthday = new DateTime($_POST['birthday']);
 	$birthday = $birthday->format("d-m-Y");
 	$gender = $_POST['gender'];
+	$id = $_POST['id'];
 
 	$update = "UPDATE users SET username=$username, firstname=$firstname, lastname=$lastname, email=$email, password= $password, 
 	                            birthday=$birthday, gender=$gender  WHERE id=$id";
-
+    header("Locaion:users.php");
 ?>
