@@ -33,7 +33,7 @@
     $result = $conn->query($user);
     $data = $result->fetch_assoc();
     $conn->close();
-    header("Locaion:users.php");
+   
  ?> 
 
 <form action="updateUser.php" method="post"> 

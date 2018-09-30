@@ -12,9 +12,9 @@
 	$update = $conn->prepare("UPDATE users SET username = ?, firstname = ?, lastname = ?, email = ?, password =?, 
 		                                      birthday = ?, gender = ? WHERE id = ?");
 	$update->bind_param("sssssssi", $username, $firstname, $lastname, $email, $password, $birthday, $gender, $id);
-	 header("Locaion:users.php");
+	 
 	$update->execute();
 	$update->close();
 	$conn->close();
-   
+    header("Location:users.php");
 ?>
