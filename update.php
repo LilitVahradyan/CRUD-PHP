@@ -3,7 +3,7 @@
     $id = $_GET['editid'];
     $user = "SELECT * FROM users WHERE  id=$id";
     $result = $conn->query($user);
-    $data = $result->fetch_assoc() ;
+    $data = $result->fetch_assoc();
    
  ?> 
 
