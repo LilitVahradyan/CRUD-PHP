@@ -21,7 +21,7 @@
 	  <ul class="menu">
       	<a href="#"><li>Menu</li></a>
       	<a href="#"><li>Home</li></a>
-        <a href="#"><li>Users</li></a>
+        <a href="users.php"><li>Users</li></a>
       </ul>
 <form action="create.php" method="post">
 	   <input type="text" name="username" placeholder="Username"><br><br>

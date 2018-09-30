@@ -24,6 +24,6 @@ require_once "db.php";
     }
 $sql->execute();
 $sql->close();
-$conn -> close();
+$conn->close();
 
 ?>
