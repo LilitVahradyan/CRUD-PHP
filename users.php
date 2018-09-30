@@ -43,7 +43,8 @@ require_once 'read.php';
         <?php }?>
     </tr>
 
-
+       
+ 
     <?php
     foreach ($users as $user){
 
@@ -56,31 +57,15 @@ require_once 'read.php';
             <td>
 
                 <?= $us; ?>
-
+            
             </td>
+
          <?php }?>
-
+          
+       <td><a href="update.php?editid=<?= $user['id']?>">Update</a></td> 
+       <td><a href="delete.php?deleteid=<?= $user['id']?>">Delete</a></td>
       </tr>
+  
     <?php }?>
-    
-     <tr>
-        <?php
-        foreach($user as $row){
-            ?>
-            <td>
-                 <a href="update.php?editid=<?= $user['id']?>">Update</a>
-            </td>
-             <?php }?>
-       </tr>
-       <tr>
-        <?php
-        foreach($user as $row){
-            ?>
-            <td>
-                <a href="delete.php?deleteid=<?= $user['id']?>">Delete</a>
-            </td>
-             <?php }?>
-       </tr>
-   
-    
+            
 </table>
