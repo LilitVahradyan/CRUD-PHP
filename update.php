@@ -4,7 +4,7 @@
     $user = "SELECT * FROM users WHERE  id=$id";
     $result = $conn->query($user);
     $data = $result->fetch_assoc();
-   
+    $conn->close();
  ?> 
 
 <form action="updateUser.php" method="post"> 

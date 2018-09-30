@@ -13,7 +13,5 @@
 	    echo "0 results";
 	}
 
-$sql->execute();
-$sql->close();
 $conn->close();
 ?>
