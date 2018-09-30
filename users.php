@@ -41,6 +41,12 @@ require_once 'read.php';
 
         </th>
         <?php }?>
+        <th>
+            Action
+        </th>
+        <th>
+            Action
+        </th>
     </tr>
 
        

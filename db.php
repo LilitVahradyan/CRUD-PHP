@@ -4,13 +4,7 @@
    $password = '';
 
    $conn = new mysqli($servername, $username, $password);
-
-   
-
    $database = "CREATE DATABASE IF NOT EXISTS myNewMySQL";
-
-   
-   
    $conn->select_db("myNewMySQL");
    $sql = "CREATE TABLE IF NOT EXISTS users (
            `id` INT AUTO_INCREMENT PRIMARY KEY,
