@@ -8,10 +8,10 @@
 	$birthday = $birthday = new DateTime($_POST['birthday']);
 	$birthday = $birthday->format("d-m-Y");
 	$gender = $_POST['gender'];
-	$id = $_POST['id'];
+	$id = $_POST['editid'];
 
-	$update =$conn-?prepare("UPDATE users SET ?, ?, ?, ?, ?, ? WHERE id=$id")
-	$update = bind_param("ssssss", 'username'=$username, 'firstname'=$firstname, 'lastname'=$lastname, 'email'=$email,
-	 'password'= $'password','birthday'=$birthday, 'gender'=$gender);
+	$update =$conn->prepare("UPDATE users SET username = ?, firstname = ?, lastname = ?, email = ?, password =?, 
+		                                      birthday = ?, gender = ? WHERE id = ?")
+	$update = bind_param("sssssssi", $username, $firstname, $lastname, $email, $password, $birthday, $gender, $id);
     header("Locaion:users.php");
 ?>
